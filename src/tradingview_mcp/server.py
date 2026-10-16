@@ -123,6 +123,11 @@ mcp = FastMCP(
         "volume_breakout_scanner, futures_market_overview, futures_top_movers, "
         "futures_category_snapshot, futures_watchlist, egx_market_overview, and more."
     ),
+   transport_security=TransportSecuritySettings(
+        enable_dns_rebinding_protection=True,
+        allowed_hosts=["trading-mcp.ohadguetta.com", "localhost:*", "127.0.0.1:*"],
+        allowed_origins=["https://trading-mcp.ohadguetta.com"],
+    ),
 )
 
 
